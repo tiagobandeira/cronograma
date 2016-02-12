@@ -125,24 +125,23 @@ $cakeDescription = 'Meu Cronograma';
                 </a>
             </div>
           </li>
+         
+          <li><?= $this->MyLink->myLink(__("Home"), ['action' => 'index', 'controller'=> 'Painel'], ['icon'=> 'mdi-action-dashboard']) ?></li>
           <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
               <li>
-                <a class="collapsible-header">Quarto<i class="mdi-action-dashboard"></i></a>
+                <a class="collapsible-header">Conteudos<i class="mdi-action-description"></i></a>
                 <div class="collapsible-body">
                   <ul>
-                    <li><a href="#primeiro">Primeiro <i class="mdi-device-add-alarm"></i></a></li>
-                    <li><a href="#primeiro">Evento<i class="mdi-device-battery-alert"></i></a></li>
+                    <li><?= $this->MyLink->myLink(__('New Conteudos'), ['action' => 'add', 'controller'=> 'Conteudos'], ['icon'=>'mdi-av-playlist-add']) ?></li>
+                    <li><?= $this->MyLink->myLink(__('List Conteudos'), ['action' => 'index', 'controller'=> 'Conteudos'], ['icon'=>'mdi-action-list']) ?></li>
                   </ul>
                 </div>
               </li>
             </ul>
           </li>
-          <li>
-            <a href="componentes.html" >Componentes<i class="mdi-action-language"></i></a>
-          </li>
-          <li><a href="tables.html">Tables<i class="mdi-action-list"></i></a></li>
-          <li class="no-padding"><a href="#" class="collapsible-header">Quarto<i class="mdi-action-dashboard"></i></a></li>
+          <li><?= $this->MyLink->myLink(__('List Hora Estudo'), ['action' => 'index', 'controller'=> 'HoraEstudo'], ['icon'=>'mdi-action-schedule']) ?></li>
+
         </ul>
       </aside>
     </div>
