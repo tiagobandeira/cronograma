@@ -32,9 +32,9 @@ $cakeDescription = 'Meu Cronograma';
 	<!-- cronograma css -->
 	<?= $this->Html->css('materialize/materialize.min.css')?>
 	<?= $this->Html->css('style.css')?>
-	<!--
+  <?= $this->Html->css('icons.css')?>
   <?= $this->Html->css('https://fonts.googleapis.com/icon?family=Material+Icons')?>
-	
+
 	<!-- end cronograma css -->
 	<!-- cronograma js -->
 	<?= $this->Html->script('jquery/dist/jquery.min.js')?>
@@ -60,9 +60,8 @@ $cakeDescription = 'Meu Cronograma';
           <a href="#" class="brand-logo">Logo</a>
           <!-- HEADER/NAV LINKS -->
           <ul class="right hide-on-med-and-down">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
+            <li><a href="#"><i class="mdi-social-notifications-none"></i></a></li>
+            <li><a href="#"><i class="mdi-navigation-more-vert"></i></a></li>
           </ul>
           <!-- END HEADER/NAV LINKS -->
         </div>
@@ -89,11 +88,11 @@ $cakeDescription = 'Meu Cronograma';
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
             <li>
-              <a class="collapsible-header">Quarto<i class="material-icons">dashboard</i></a>
+              <a class="collapsible-header">Quarto<i class="mdi-action-dashboard"></i></a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="#primeiro">Primeiro <i class="material-icons">list</i></a></li>
-                  <li><a href="#primeiro">Evento<i class="material-icons">event</i></a></li>
+                  <li><a href="#primeiro">Primeiro <i class="mdi-device-add-alarm"></i></a></li>
+                  <li><a href="#primeiro">Evento<i class="mdi-device-battery-alert"></i></a></li>
                 </ul>
               </div>
             </li>
@@ -129,19 +128,21 @@ $cakeDescription = 'Meu Cronograma';
           <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
               <li>
-                <a class="collapsible-header">Quarto<i class="material-icons">dashboard</i></a>
+                <a class="collapsible-header">Quarto<i class="mdi-action-dashboard"></i></a>
                 <div class="collapsible-body">
                   <ul>
-                    <li><a href="#primeiro">Primeiro <i class="material-icons">list</i></a></li>
-                    <li><a href="#primeiro">Evento<i class="material-icons">event</i></a></li>
+                    <li><a href="#primeiro">Primeiro <i class="mdi-device-add-alarm"></i></a></li>
+                    <li><a href="#primeiro">Evento<i class="mdi-device-battery-alert"></i></a></li>
                   </ul>
                 </div>
               </li>
             </ul>
           </li>
-          <li><a href="componentes.html">Componentes<i class="material-icons">language</i></a></li>
-          <li><a href="tables.html">Tables<i class="material-icons">format_list_numbered</i></a></li>
-          <li><a href="#terceiro">Terceiro<i class="material-icons">create_new_folder</i></a></li>
+          <li>
+            <a href="componentes.html" >Componentes<i class="mdi-action-language"></i></a>
+          </li>
+          <li><a href="tables.html">Tables<i class="mdi-action-list"></i></a></li>
+          <li class="no-padding"><a href="#" class="collapsible-header">Quarto<i class="mdi-action-dashboard"></i></a></li>
         </ul>
       </aside>
     </div>
@@ -156,25 +157,28 @@ $cakeDescription = 'Meu Cronograma';
         <!-- MAIN CONTENT -->
         <div class="my-content">
           <div class="row">
-              <div class="col col s12 m12 l10 offset-l1">
-                  <h3 class="green-text">Template para Cronograma</h3>
-                  <!-- CODIGO CARD PAINEL  -->
-                  <div class="row">
-                    <div class="col col s12 m12 l12">
-                      <div class="card-panel teal">
-                        <span class="white-text">Este é um simples exemplo de template adiministrativivo criado por Tiago Bandeira
-                          para gerenciar um sistema de Plano de Estudos. Este exemplo ainda está na faze de desenvolvimento
-                        </span>
-                      </div>
+            <div class="col col s12 m12 l12">
+            <h3 class="green-text"><a href="" class="green-text"><?= $this->fetch('title') ?></a></h3>
+            <div class="divider"></div>
+            </div>
+            <div class="col col s12 m12 l10 offset-l1">
+                <!--  PAINEL  -->
+                <div class="row">
+                  <div class="col col s12 m12 l12">
+                    <div class="card-panel teal">
+                      <span class="white-text">Este é um simples exemplo de template adiministrativivo criado por Tiago Bandeira
+                        para gerenciar um sistema de Plano de Estudos. Este exemplo ainda está na faze de desenvolvimento
+                      </span>
                     </div>
                   </div>
-                  <!-- END CODIGO CARDS PAINEL -->
-              </div>
-              <div class="col col s12 m12 l10 offset-l1">
-                  <?= $this->Flash->render() ?>
-                  <h3 ><a href="" class="green-text"><?= $this->fetch('title') ?></a></h3>
-                  <?= $this->fetch('content') ?>
-              </div>
+                </div>
+                <!-- END  PAINEL -->
+            </div>
+            <div class="col col s12 m12 l10 offset-l1">
+                <?= $this->Flash->render() ?>
+                <h4  class="green-text">Estudar</h4>
+                <?= $this->fetch('content') ?>
+            </div>
           </div>
         </div>
         <!-- END MAIN CONTENT -->

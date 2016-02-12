@@ -10,6 +10,9 @@
 .my-link-header li a{
 	padding-left: 16px;
 }
+.my-link-header li a i{
+	font-size: 1.6em;
+}
 
 .profile{
 	padding-top: 60px;
