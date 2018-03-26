@@ -4,8 +4,8 @@
  * @var \App\Model\Entity\HoraEstudo[]|\Cake\Collection\CollectionInterface $horaEstudo
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+<nav class="hide-on-med-and-down" id="actions-sidebar">
+    <ul class="left hide-on-med-and-down">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Hora Estudo'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Materias'), ['controller' => 'Materias', 'action' => 'index']) ?></li>

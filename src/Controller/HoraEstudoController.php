@@ -20,6 +20,7 @@ class HoraEstudoController extends AppController
      */
     public function index()
     {
+       
         $this->paginate = [
             'contain' => ['Materias', 'Periodos', 'Temas']
         ];
