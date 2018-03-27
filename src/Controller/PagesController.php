@@ -66,4 +66,7 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+    public function painel(){
+        $this->set('nome', 'Tiago');
+    }
 }
