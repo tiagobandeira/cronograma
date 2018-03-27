@@ -3,7 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
-
+use Cake\I18n\Time;
 /**
  * Painel Controller
  *
@@ -28,7 +28,7 @@ class PainelController extends AppController
         $planoEstudo = $planoEstudoM->find('all');
         //Hora de Estudo
         $horaEstudoM = TableRegistry::get('HoraEstudo');
-        $horaEstudo = $horaEstudoM->find('all', ['contain' => ['Temas', 'Materias']]);
+        $horaEstudo = $horaEstudoM->find('all', ['contain' => ['Temas', 'Materias']])->where(['Day(HoraEstudo.data) = '=> Time::now()->day]);
         $this->set('planoEstudo',$planoEstudo);
         $this->set('horaEstudo',$horaEstudo);
     }
