@@ -5,8 +5,8 @@
  */
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+    <ul class="">
+       
         <li><?= $this->Html->link(__('List Hora Estudo'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Materias'), ['controller' => 'Materias', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Materia'), ['controller' => 'Materias', 'action' => 'add']) ?></li>
@@ -18,8 +18,7 @@
 </nav>
 <div class="horaEstudo form large-9 medium-8 columns content">
     <?= $this->Form->create($horaEstudo) ?>
-    <fieldset>
-        <legend><?= __('Add Hora Estudo') ?></legend>
+       <h4 class="header"><?= __('Add Hora Estudo') ?></h4>
         <?php
             echo $this->Form->control('titulo');
             echo $this->Form->control('nota');
@@ -30,7 +29,7 @@
             echo $this->Form->control('periodo_id', ['options' => $periodos, 'empty' => true]);
             echo $this->Form->control('tema_id', ['options' => $temas, 'empty' => true]);
         ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+        <?= $this->Form->button(__('Submit'), ['class' => 'btn cyan waves-effect waves-light right']) ?>
+   
     <?= $this->Form->end() ?>
 </div>

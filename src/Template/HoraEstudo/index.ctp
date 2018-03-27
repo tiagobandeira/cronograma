@@ -6,7 +6,6 @@
 ?>
 <nav class="hide-on-med-and-down" id="actions-sidebar">
     <ul class="left hide-on-med-and-down">
-        <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Hora Estudo'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Materias'), ['controller' => 'Materias', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Materia'), ['controller' => 'Materias', 'action' => 'add']) ?></li>
@@ -16,8 +15,8 @@
         <li><?= $this->Html->link(__('New Tema'), ['controller' => 'Temas', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="horaEstudo index large-9 medium-8 columns content">
-    <h3><?= __('Hora Estudo') ?></h3>
+<div class="horaEstudo index large-9 medium-8 columns content card-panel">
+    <h4 class="header"><?= __('Hora Estudo') ?></h4>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
