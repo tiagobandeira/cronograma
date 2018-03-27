@@ -6,7 +6,7 @@
             <li class="collection-item avatar">
                 <i class="mdi-file-folder blue circle"></i>
                 <span class="collection-header">Planos de Estudos</span>
-                <p>Assigned to you</p>
+                <p>Cronograma</p>
                 <a href="#" class="secondary-content"><i class="mdi-action-grade"></i></a>
             </li>
             <?php
@@ -35,7 +35,7 @@
         <ul id="task-card" class="collection with-header">
         <li class="collection-header cyan">
             <h4 class="task-card-title">Horário de Hoje</h4>
-            <p class="task-card-date"><?php echo(strftime("%B %d, %Y - %A",strtotime("2018-03-27")));?></p>
+            <p class="task-card-date"><?php echo(strftime("%B %d, %Y - %A",strtotime("now")));?></p>
         </li>
         <?php
             foreach ($horaEstudo as $value) {
