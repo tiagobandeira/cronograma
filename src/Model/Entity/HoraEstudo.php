@@ -35,6 +35,7 @@ class HoraEstudo extends Entity
     protected $_accessible = [
         'titulo' => true,
         'nota' => true,
+        'data' => true,
         'hora_inicial' => true,
         'hora_fim' => true,
         'semana' => true,

@@ -22,6 +22,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('titulo') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('data') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('nota') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('hora_inicial') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('hora_fim') ?></th>
@@ -37,6 +38,7 @@
             <tr>
                 <td><?= $this->Number->format($horaEstudo->id) ?></td>
                 <td><?= h($horaEstudo->titulo) ?></td>
+                <td><?= h($horaEstudo->data) ?></td>
                 <td><?= h($horaEstudo->nota) ?></td>
                 <td><?= h($horaEstudo->hora_inicial) ?></td>
                 <td><?= h($horaEstudo->hora_fim) ?></td>

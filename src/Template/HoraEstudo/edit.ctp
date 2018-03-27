@@ -29,6 +29,7 @@
         <?php
             echo $this->Form->control('titulo');
             echo $this->Form->control('nota');
+            echo $this->Form->control('data');
             echo $this->Form->control('hora_inicial', ['empty' => true]);
             echo $this->Form->control('hora_fim', ['empty' => true]);
             echo $this->Form->control('semana');
