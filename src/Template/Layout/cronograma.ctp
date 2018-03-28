@@ -182,7 +182,7 @@ $cakeDescription = 'Meu Cronograma';
                 </div>
             </div>
             </li>
-            <li class="bold"><a href="#" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a>
+            <li class="bold"><a href="/projetos/Cake/Cronograma/" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a>
             </li>
             <li class="no-padding">
                 <ul class="collapsible collapsible-accordion">
