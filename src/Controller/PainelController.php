@@ -25,11 +25,18 @@ class PainelController extends AppController
     {
         //Plano de Estudos
         $planoEstudoM = TableRegistry::get('PlanoEstudo');
-        $planoEstudo = $planoEstudoM->find('all');
+        $planoEstudo = $planoEstudoM->find('all', ['contain' => ['Cronogramas']])->where(['PlanoEstudo.id' => 1]);
+        //Cronograma
+        $cronogramaM = TableRegistry::get('Cronogramas');
+        $cronograma  = $cronogramaM->find('all');
         //Hora de Estudo
         $horaEstudoM = TableRegistry::get('HoraEstudo');
-        $horaEstudo = $horaEstudoM->find('all', ['contain' => ['Temas', 'Materias']])->where(['Day(HoraEstudo.data) = '=> Time::now()->day]);
+        $horaEstudo = $horaEstudoM->find('all', ['contain' => ['Temas' => ['Conteudos' => 'Segmentos', 'Disciplinas',], 'Materias']])->where(['Day(HoraEstudo.data) = '=> Time::now()->day]);
+        //Conteudos
+        //$conteudoM = TableRegistry::get('Conteudos');
+
         $this->set('planoEstudo',$planoEstudo);
+        $this->set('cronograma', $cronograma);
         $this->set('horaEstudo',$horaEstudo);
     }
 }

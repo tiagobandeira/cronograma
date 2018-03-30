@@ -1,37 +1,16 @@
 <?php
+    
+    foreach ($horaEstudo as $value) {
+       # echo $value->tema->disciplina;
+        /*
+        foreach ($value->tema->disciplina as $value2) {
+            echo $value2->nome . " - "; 
+            # code...
+        }*/
+    }
 ?>
 <div class="row">
-    <div class="col s12 m12 l8">
-        <ul id="issues-collection" class="collection">
-            <li class="collection-item avatar">
-                <i class="mdi-file-folder blue circle"></i>
-                <span class="collection-header">Planos de Estudos</span>
-                <p>Cronograma</p>
-                <a href="#" class="secondary-content"><i class="mdi-action-grade"></i></a>
-            </li>
-            <?php
-                foreach ($planoEstudo as $value) {
-            ?>
-            <li class="collection-item">
-                <div class="row">
-                    <div class="col s7">
-                        <p class="collections-title"><strong><?= $value->id?></strong> <?= $value->nome?></p>
-                        <p class="collections-content"><?= $value->descricao?></p>
-                    </div>
-                    <div class="col s2">
-                        <span class="task-cat pink accent-2">P1</span>
-                    </div>
-                    <div class="col s3">
-                        <div class="progress">
-                                <div class="determinate" style="width: 70%"></div>   
-                        </div>                                                
-                    </div>
-                </div>
-            </li>
-            <?php }?>
-        </ul>
-    </div>
-    <div class="col s12 m12 l4">
+<div class="col s12 m12 l12">
         <ul id="task-card" class="collection with-header">
         <li class="collection-header cyan">
             <h4 class="task-card-title">Horário de Hoje</h4>
@@ -49,8 +28,42 @@
         <?php }?>
        
         </ul>
-    </div>
+</div>
 </div>
 
 <div class="row">
+        <?php
+            foreach ($horaEstudo as $value) {
+        ?>
+    
+    <div class="col s12 m12 l4">
+        <ul id="issues-collection" class="collection">
+            <li class="collection-item avatar">
+                <i class="mdi-social-school blue circle"></i>
+                <span class="collection-header"><?= $value->materia->nome?> / <?= $value->tema->disciplina->nome?></span>
+                <p><?= $value->tema->descricao?></p>
+                <a href="#" class="secondary-content"><i class="mdi-action-grade"></i></a>
+            </li>
+           <?php foreach ($value->tema->conteudos as $conteudo){ ?>
+            <li class="collection-item">
+                <div class="row">
+                    <div class="col s7">
+                        <p class="collections-title"><strong><?= $conteudo->id?> <?= $conteudo->nome?></strong> </p>
+                        <p class="collections-content"><?= $conteudo->video?></p>
+                    </div>
+                    <div class="col s2">
+                        <span class="task-cat pink accent-2"><?= $conteudo->segmento->nome?></span>
+                    </div>
+                    <div class="col s3">
+                        <div class="progress">
+                                <div class="determinate" style="width:<?= ($conteudo->segmento_id * 10) ."%"?>"></div>   
+                        </div>                                                
+                    </div>
+                </div>
+            </li>
+            <?php }?>
+        </ul>
+    </div>
+    <?php }?>
 </div>
+
