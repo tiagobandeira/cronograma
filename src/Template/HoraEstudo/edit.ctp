@@ -29,9 +29,9 @@
         <?php
             echo $this->Form->control('titulo');
             echo $this->Form->control('nota');
-            echo $this->Form->control('data');
-            echo $this->Form->control('hora_inicial', ['empty' => true]);
-            echo $this->Form->control('hora_fim', ['empty' => true]);
+            echo $this->Form->control('data',  ['type' => 'text','class' => 'datepicker']);
+            echo $this->Form->control('hora_inicial',  ['type' => 'text', 'class' => 'timepicker']);
+            echo $this->Form->control('hora_fim',  ['type' => 'text', 'class' => 'timepicker']);
             echo $this->Form->control('semana');
             echo $this->Form->control('materia_id', ['options' => $materias, 'empty' => true]);
             echo $this->Form->control('periodo_id', ['options' => $periodos, 'empty' => true]);
@@ -41,3 +41,13 @@
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>
+<script>
+    //Ler data
+    $('.datepicker').datepicker({
+        format:'yyyy-mm-d'
+    });
+    $('.timepicker').timepicker({
+        twelveHour: false
+    });
+    $('select').formSelect();
+</script>

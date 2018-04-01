@@ -1,0 +1,40 @@
+/* MY CSS */
+.my-nav{
+	position: fixed;
+}
+
+.my-content{
+	width: 100%;
+}
+
+.my-link-header li a{
+	padding-left: 16px;
+}
+
+.profile{
+	padding-top: 60px;
+}
+/* END MY CSS */
+
+/* MOBILE | DESKTOP */
+main, footer{
+	padding-left: 300px;
+}
+@media only screen and (max-width : 992px) {
+	main, footer{
+	  padding-left: 0;
+	}
+}
+/* END MOBILE | DESKTOP */
+
+/* FOOTER */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+/*END FOOTER*/
