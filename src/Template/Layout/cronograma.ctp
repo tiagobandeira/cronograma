@@ -173,9 +173,8 @@ $cakeDescription = 'Meu Cronograma';
                 </div>
                 <!-- END  PAINEL -->
             </div>
-            <div class="col col s12 m12 l10 offset-l1">
+            <div class="col col s12 m12 l12">
                 <?= $this->Flash->render() ?>
-                <h4  class="green-text">Estudar</h4>
                 <?= $this->fetch('content') ?>
             </div>
           </div>
