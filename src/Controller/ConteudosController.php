@@ -111,4 +111,11 @@ class ConteudosController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+    public function video($id = null){
+        $conteudo = $this->Conteudos->get($id, [
+            'contain' => ['Segmentos', 'Temas' => 'Conteudos']
+        ]);
+
+        $this->set('conteudo', $conteudo);
+    }
 }

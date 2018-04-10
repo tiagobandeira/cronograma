@@ -19,7 +19,7 @@
                         <th>Matéria</th>
                         <th>Disciplina</th>
                         <th>Tema</th>
-                        <th>Ações</th>
+                        <th>Conteúdo</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,8 +29,8 @@
                     <tr>
                         <td><?= $value->materia->nome?></td>
                         <td><?= $value->tema->disciplina->nome?></td>
-                        <td><?= $value->tema->descricao?></td>
-                        <td><a href="#">Ver conteúdo</a></td>
+                        <td><?= $value->tema->nome?></td>
+                        <td><?= $this->Html->link(__('View'), ['controller' => 'Temas','action' => 'conteudos', $value->tema->id]) ?></td>
                     </tr>
                     <?php }?>
                 </tbody>

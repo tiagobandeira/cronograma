@@ -43,5 +43,4 @@
     $('.timepicker').timepicker({
         twelveHour: false
     });
-    $('select').formSelect();
 </script>

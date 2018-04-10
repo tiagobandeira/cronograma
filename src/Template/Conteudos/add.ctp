@@ -16,8 +16,7 @@
 </nav>
 <div class="conteudos form large-9 medium-8 columns content">
     <?= $this->Form->create($conteudo) ?>
-    <fieldset>
-        <legend><?= __('Add Conteudo') ?></legend>
+        <?= __('Add Conteudo') ?>
         <?php
             echo $this->Form->control('nome');
             echo $this->Form->control('nota');
@@ -28,7 +27,6 @@
             echo $this->Form->control('segmento_id', ['options' => $segmentos, 'empty' => true]);
             echo $this->Form->control('tema_id', ['options' => $temas, 'empty' => true]);
         ?>
-    </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>

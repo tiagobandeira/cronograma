@@ -109,4 +109,11 @@ class TemasController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+    public function conteudos($id = null){
+        $tema = $this->Temas->get($id, [
+            'contain' => ['Disciplinas', 'Conteudos', 'HoraEstudo']
+        ]);
+
+        $this->set('tema', $tema);
+    }
 }

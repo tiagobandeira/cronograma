@@ -16,14 +16,14 @@
 </nav>
 <div class="disciplinas form large-9 medium-8 columns content">
     <?= $this->Form->create($disciplina) ?>
-    <fieldset>
-        <legend><?= __('Add Disciplina') ?></legend>
-        <?php
-            echo $this->Form->control('nome');
-            echo $this->Form->control('descricao');
-            echo $this->Form->control('materia_id', ['options' => $materias, 'empty' => true]);
-        ?>
-    </fieldset>
+   
+    <?= __('Add Disciplina') ?>
+    <?php
+        echo $this->Form->control('nome');
+        echo $this->Form->control('descricao');
+        echo $this->Form->control('materia_id', ['options' => $materias, 'empty' => true]);
+    ?>
+   
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>

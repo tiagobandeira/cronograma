@@ -51,7 +51,7 @@ $cakeDescription = 'Meu Cronograma';
     <h1><a href=""><?php # $this->fetch('title') ?></a></h1>
     <?php #$this->fetch('content') ?>
     -->
-    <body class="">
+  <body class="">
     <!-- HEADER -->
     <header class="navbar-fixed">
       <nav class="green accent-3">
@@ -157,7 +157,7 @@ $cakeDescription = 'Meu Cronograma';
         <div class="my-content">
           <div class="row">
             <div class="col col s12 m12 l12">
-            <h3 class="green-text"><a href="" class="green-text"><?= $this->fetch('title') ?></a></h3>
+            <h4 class="green-text"><a href="" class="green-text"><?= $this->fetch('title') ?></a></h4>
             <div class="divider"></div>
             </div>
             <div class="col col s12 m12 l10 offset-l1">
@@ -206,5 +206,6 @@ $cakeDescription = 'Meu Cronograma';
   </body>
 <script>
     $('.sidenav').sidenav();
+    $('select').formSelect();
 </script>
 </html>

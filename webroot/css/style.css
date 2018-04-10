@@ -17,6 +17,10 @@
 .profile{
 	padding-top: 60px;
 }
+
+.my-title{
+	
+}
 /* END MY CSS */
 
 /* MOBILE | DESKTOP */
@@ -41,3 +45,15 @@ main {
     flex: 1 0 auto;
 }
 /*END FOOTER*/
+/*MIDIA*/
+.content-play-list{
+	height: 25.15em;
+}
+.play-list-body{
+	height: 18em;
+	overflow:auto;
+}
+.play-list .collection{
+	border: none;
+}
+/*END MIDIA*/
