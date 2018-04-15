@@ -141,6 +141,7 @@ $cakeDescription = 'Meu Cronograma';
             </ul>
           </li>
           <li><?= $this->MyLink->myLink(__('List Hora Estudo'), ['action' => 'index', 'controller'=> 'HoraEstudo'], ['icon'=>'mdi-action-schedule']) ?></li>
+          <li><a id="info" class="collapsible-header">Sobre<i class="mdi-action-info"></i></a></li>
 
         </ul>
       </aside>
@@ -157,13 +158,13 @@ $cakeDescription = 'Meu Cronograma';
         <div class="my-content">
           <div class="row">
             <div class="col col s12 m12 l12">
-            <h4 class="green-text"><a href="" class="green-text"><?= $this->fetch('title') ?></a></h4>
+            <h5 class="green-text"><a href="" class="green-text"><?= $this->fetch('title') ?></a></h5>
             <div class="divider"></div>
             </div>
             <div class="col col s12 m12 l10 offset-l1">
                 <!--  PAINEL  -->
-                <div class="row">
-                  <div class="col col s12 m12 l12">
+                <div class="row"  >
+                  <div id="sobre" class="col col s12 m12 l12 hide">
                     <div class="card-panel teal">
                       <span class="white-text">Este é um simples exemplo de template adiministrativivo criado por Tiago Bandeira
                         para gerenciar um sistema de Plano de Estudos. Este exemplo ainda está na faze de desenvolvimento
@@ -207,5 +208,10 @@ $cakeDescription = 'Meu Cronograma';
 <script>
     $('.sidenav').sidenav();
     $('select').formSelect();
+
+    $("#info").click(function(){
+        $("#sobre").removeClass("hide");
+    });
+      console.log($('#sobre')[0]);
 </script>
 </html>
