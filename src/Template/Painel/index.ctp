@@ -67,7 +67,7 @@ use Cake\I18n\Date;
                                         <td><?= $value->materia->nome?></td>
                                         <td><?= $value->has('tema')? $value->tema->disciplina->nome: ''?></td>
                                         <td><?= $value->has('tema')?$value->tema->nome: ''?></td>
-                                        <td><?= $this->Html->link(__('View'), ['controller' => 'Temas','action' => 'conteudos', $value->has('tema') ?$value->id: 1]) ?></td>
+                                        <td><?= $this->Html->link(__('Ver'), ['controller' => 'Temas','action' => 'conteudos', $value->has('tema') ?$value->id: 1], ['class'=>'btn']) ?></td>
                                     </tr>
                                     <?php }?>
                                 </tbody>
@@ -89,7 +89,7 @@ use Cake\I18n\Date;
                                 <tbody >
                                 <?php 
                                 if($semana):
-                                    for($h =0; $h < count(max($semana));$h++):?>
+                                    for($h =0; $h < count(max($semana)) - 1;$h++):?>
                                     <tr>
                                     <?php for($i = 0; $i < 7; $i++):?>
                                         <td>
@@ -98,11 +98,11 @@ use Cake\I18n\Date;
                                                 $data = new Date($value2->data);
                                                 if($data->format("w") == $i){
                                             ?>
-                                            <input type="hidden" name="" id="hora_inicial" value="<?= $value2->hora_inicial?>">
-                                            <input type="hidden" name="" id="hora_fim" value="<?= $value2->hora_fim?>">
-                                            <input type="hidden" name="" id="descricao" value="<?= $value2->nota?>">
-                                            <input type="hidden" name="" id="titulo" value="<?= $value2->titulo?>">
-                                            <button id="" value="<?= $value2->titulo?>" data-target="modal_id" class="btn btn-flat modal-trigger">
+                                            <input type="hidden" name="hora_inicial"  value="<?= $value2->hora_inicial?>">
+                                            <input type="hidden" name="hora_fim"  value="<?= $value2->hora_fim?>">
+                                            <input type="hidden" name="descricao"  value="<?= $value2->nota?>">
+                                            <input type="hidden" name="titulo"  value="<?= $value2->titulo?>">
+                                            <button id="<?= $value2->id?>" value="<?= $value2->titulo?>" data-target="modal_id" class="btn btn-flat modal-trigger">
                                                <?= $value2->materia->nome?>
                                             </button>
                                             <?php }?>
@@ -171,17 +171,20 @@ use Cake\I18n\Date;
         if(btn[0].value == "domingo" || btn[0].value == "sabado"){
             genero = "no";
         }
+        console.log($('input'));
+        /*
         descricao = $('#descricao').val();
         titulo    = $('#titulo').val();
         $('#descricao_modal').text(descricao);
         $('#titulo_modal').text(titulo);
-        hora_i = $('#hora_inicial').val();
+        hora_i = $('input[name="hora_inicial"]').val();
         hora_f = $('#hora_fim').val();
         time1  = new Date(hora_i);
         time2  = new Date(hora_f);
         console.log(time1.toTimeString());
-        $('#inicio_id').val(time1.toTimeString());
+        $('input[fim_id]').val(time1.toTimeString());
         $('#fim_id').val(time2.toTimeString());
+        */
     });
 
     var d1 = new Date();
